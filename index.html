@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vevel 1999 美業肌膚管理陪跑計畫｜短影片企劃提案</title>
+  <meta name="description" content="Vevel 維薇爾肌膚管理 1999 美業陪跑活動提案，包含短影片腳本、主理人口播、拍攝素材、廣告投放與執行時程。">
   <style>
     :root {
       --ink: #2f2b28;
@@ -49,6 +50,71 @@
       background: #211f1d;
     }
 
+    .topbar {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      z-index: 10;
+      transform: translateX(-50%);
+      width: min(1120px, calc(100% - 28px));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 12px 10px 16px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 8px;
+      background: rgba(47, 43, 40, .72);
+      color: var(--white);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+    }
+
+    .brandmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .brandmark span {
+      width: 28px;
+      height: 28px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 7px;
+      background: var(--rose);
+      color: var(--white);
+      font-size: 15px;
+      flex: 0 0 auto;
+    }
+
+    .toplinks {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .toplinks a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 10px;
+      border-radius: 7px;
+      color: rgba(255, 255, 255, .82);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .toplinks a:hover,
+    .toplinks a:focus {
+      background: rgba(255, 255, 255, .13);
+      color: var(--white);
+    }
+
     .hero::before {
       content: "";
       position: absolute;
@@ -73,6 +139,17 @@
       margin: 0 auto;
       padding: 92px 0 76px;
       color: var(--white);
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 42px;
+      align-items: end;
+    }
+
+    .hero-copy {
+      min-width: 0;
     }
 
     .eyebrow {
@@ -115,6 +192,31 @@
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 34px;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 10px;
+      align-content: end;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .12);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-points strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #ffe1c5;
+      font-size: 14px;
+    }
+
+    .hero-points p {
+      margin: 0;
+      color: rgba(255, 255, 255, .84);
+      font-size: 15px;
+      line-height: 1.55;
     }
 
     .button {
@@ -176,6 +278,60 @@
       font-size: 14px;
     }
 
+    .intro-band {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 72px;
+      padding: 22px;
+      border-radius: 8px;
+      background: #2f2b28;
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .intro-copy {
+      padding: 18px;
+    }
+
+    .intro-copy h2 {
+      max-width: 720px;
+    }
+
+    .intro-copy p {
+      margin: 16px 0 0;
+      color: rgba(255, 255, 255, .78);
+      font-size: 18px;
+    }
+
+    .deliverables {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .deliverable {
+      min-height: 112px;
+      padding: 16px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .14);
+    }
+
+    .deliverable b {
+      display: block;
+      margin-bottom: 6px;
+      color: #ffe1c5;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .deliverable span {
+      color: rgba(255, 255, 255, .82);
+      font-size: 14px;
+    }
+
     main {
       width: min(1120px, calc(100% - 40px));
       margin: 76px auto 96px;
@@ -233,6 +389,19 @@
       line-height: 1.25;
     }
 
+    .card.feature {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card.feature::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--rose), var(--teal), var(--gold));
+    }
+
     .card p {
       margin: 0;
       color: var(--muted);
@@ -249,6 +418,41 @@
       color: var(--teal);
       font-size: 13px;
       font-weight: 800;
+    }
+
+    .stage {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .stage:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stage-num {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--teal);
+      color: var(--white);
+      font-weight: 900;
+      font-size: 24px;
+    }
+
+    .stage h3 {
+      margin: 0 0 6px;
+      font-size: 24px;
+    }
+
+    .stage p {
+      margin: 0;
+      color: var(--muted);
     }
 
     .script {
@@ -443,6 +647,15 @@
     }
 
     @media (max-width: 860px) {
+      .topbar {
+        position: absolute;
+        top: 10px;
+        width: min(100% - 24px, 520px);
+        align-items: flex-start;
+      }
+      .toplinks {
+        display: none;
+      }
       .hero { min-height: 86vh; }
       .hero::before {
         background:
@@ -450,6 +663,9 @@
           linear-gradient(0deg, rgba(33, 31, 29, .9) 0%, rgba(33, 31, 29, .25) 60%);
       }
       .next-hint,
+      .hero-layout,
+      .intro-band,
+      .deliverables,
       .section-head,
       .grid-3,
       .grid-2,
@@ -481,15 +697,46 @@
   </style>
 </head>
 <body>
+  <nav class="topbar" aria-label="頁面導覽">
+    <a class="brandmark" href="#">
+      <span>V</span>
+      <strong>Vevel 1999 提案頁</strong>
+    </a>
+    <div class="toplinks">
+      <a href="#strategy">活動定位</a>
+      <a href="#script">影片腳本</a>
+      <a href="#materials">拍攝素材</a>
+      <a href="#ads">投放方向</a>
+    </div>
+  </nav>
+
   <header class="hero">
     <img src="assets/beauty-training-hero.png" alt="美業肌膚管理教學情境">
     <div class="hero-inner">
-      <div class="eyebrow">Vevel 維薇爾肌膚管理</div>
-      <h1>1999 美業肌膚管理陪跑計畫</h1>
-      <p>一支短影片，把「想學技術、想創業、想有人帶入門」的新手需求，轉成可私訊、可預約、可投放的招生訊息。</p>
-      <div class="hero-actions">
-        <a class="button primary" href="#script">查看短影片腳本</a>
-        <a class="button secondary" href="#materials">查看拍攝素材</a>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow">Vevel 維薇爾肌膚管理</div>
+          <h1>1999 美業肌膚管理陪跑計畫</h1>
+          <p>把「想學技術、想創業、想有人帶入門」的新手需求，轉成可拍攝、可私訊、可投放的招生短影片。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#script">查看短影片腳本</a>
+            <a class="button secondary" href="#materials">查看拍攝素材</a>
+          </div>
+        </div>
+        <aside class="hero-points" aria-label="提案摘要">
+          <div>
+            <strong>主訊息</strong>
+            <p>你不是不適合美業，是缺少有人帶你從技術、社群、顧客管理開始。</p>
+          </div>
+          <div>
+            <strong>影片目標</strong>
+            <p>讓新手主動私訊「1999」，再由私訊諮詢承接報名。</p>
+          </div>
+          <div>
+            <strong>畫面策略</strong>
+            <p>主理人出鏡＋教學側拍＋手機經營畫面，建立陪跑可信度。</p>
+          </div>
+        </aside>
       </div>
     </div>
   </header>
@@ -514,23 +761,37 @@
   </div>
 
   <main>
-    <section>
+    <section class="intro-band" aria-label="企劃摘要">
+      <div class="intro-copy">
+        <div class="eyebrow">Campaign Proposal</div>
+        <h2>從「課程優惠」改成「有人陪跑入門」</h2>
+        <p>1999 的價值不只在價格，而是讓美業新手先看懂方向、知道怎麼學技術、怎麼經營社群、怎麼開始管理顧客。</p>
+      </div>
+      <div class="deliverables">
+        <div class="deliverable"><b>01</b><span>短影片主腳本與主理人口播</span></div>
+        <div class="deliverable"><b>02</b><span>拍攝素材清單與畫面用途</span></div>
+        <div class="deliverable"><b>03</b><span>IG / FB 廣告文案與設定</span></div>
+        <div class="deliverable"><b>04</b><span>上架投放執行時程</span></div>
+      </div>
+    </section>
+
+    <section id="strategy">
       <div class="section-head">
         <h2>活動定位</h2>
         <p>這不是單堂技術課，而是給美業新手的一次入門方向整理。重點是降低不確定感，讓對方覺得「我可以先被帶著走」。</p>
       </div>
       <div class="grid-3">
-        <article class="card">
+        <article class="card feature">
           <span class="tag">受眾</span>
           <h3>想創業的人</h3>
           <p>對美業有興趣，想開工作室或做副業，但不知道該先學技術、找客源，還是先經營社群。</p>
         </article>
-        <article class="card">
+        <article class="card feature">
           <span class="tag">需求</span>
           <h3>想有人帶入門</h3>
           <p>不是單純買課，而是需要有人幫他看方向、拆流程、理解美業實際接客會遇到什麼。</p>
         </article>
-        <article class="card">
+        <article class="card feature">
           <span class="tag">轉換</span>
           <h3>私訊後再評估</h3>
           <p>短影片不需要一次講完全部細節，核心任務是讓對方私訊「1999」領活動內容。</p>
@@ -543,19 +804,28 @@
         <h2>影片溝通邏輯</h2>
         <p>先戳痛點，再講新手真正會卡住的地方，最後提出 1999 陪跑計畫。這樣會比直接說「課程優惠」更有說服力。</p>
       </div>
-      <div class="grid-3">
-        <article class="card">
-          <h3>1. 先讓對方點頭</h3>
-          <p>「想進入美業，但不知道第一步該怎麼開始？」讓想學的人先被說中。</p>
-        </article>
-        <article class="card">
-          <h3>2. 拆開真正困難</h3>
-          <p>美業不是只會操作，還有社群曝光、預約回覆、回訪、顧客留存。</p>
-        </article>
-        <article class="card">
-          <h3>3. 給出明確入口</h3>
-          <p>用「1999 陪跑計畫」降低門檻，再用「私訊 1999」收名單。</p>
-        </article>
+      <div>
+        <div class="stage">
+          <div class="stage-num">1</div>
+          <div>
+            <h3>先讓對方點頭</h3>
+            <p>「想進入美業，但不知道第一步該怎麼開始？」讓想學的人先被說中。</p>
+          </div>
+        </div>
+        <div class="stage">
+          <div class="stage-num">2</div>
+          <div>
+            <h3>拆開真正困難</h3>
+            <p>美業不是只會操作，還有社群曝光、預約回覆、回訪、顧客留存。</p>
+          </div>
+        </div>
+        <div class="stage">
+          <div class="stage-num">3</div>
+          <div>
+            <h3>給出明確入口</h3>
+            <p>用「1999 陪跑計畫」降低門檻，再用「私訊 1999」收名單。</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -702,7 +972,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="ads">
       <div class="section-head">
         <h2>廣告投放方向</h2>
         <p>第一波以「私訊名單」為目標，不急著把所有課程細節塞進廣告。先讓想學的人舉手，再由私訊成交。</p>
