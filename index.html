@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vevel 1999 美業肌膚管理陪跑計畫｜短影片企劃提案</title>
+  <style>
+    :root {
+      --ink: #2f2b28;
+      --muted: #72675f;
+      --line: #e8ded4;
+      --paper: #fffaf5;
+      --soft: #f5ece3;
+      --rose: #bd6f6f;
+      --teal: #36756f;
+      --gold: #b98945;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(47, 43, 40, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      background: #211f1d;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(33, 31, 29, .88) 0%, rgba(33, 31, 29, .62) 42%, rgba(33, 31, 29, .08) 100%),
+        linear-gradient(0deg, rgba(33, 31, 29, .88) 0%, rgba(33, 31, 29, .2) 38%, rgba(33, 31, 29, .08) 100%);
+      z-index: 1;
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 92px 0 76px;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      color: #ffe1c5;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: #ffe1c5;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      font-size: clamp(42px, 7vw, 84px);
+      line-height: 1.08;
+      letter-spacing: 0;
+      font-weight: 900;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 24px 0 0;
+      font-size: clamp(18px, 2.2vw, 24px);
+      color: rgba(255, 255, 255, .88);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      line-height: 1.2;
+      border: 1px solid rgba(255, 255, 255, .32);
+    }
+
+    .button.primary {
+      background: var(--rose);
+      border-color: var(--rose);
+      color: var(--white);
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, .12);
+      color: var(--white);
+      backdrop-filter: blur(8px);
+    }
+
+    .next-hint {
+      position: relative;
+      z-index: 2;
+      width: min(1120px, calc(100% - 40px));
+      margin: -42px auto 0;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+    }
+
+    .metric {
+      padding: 22px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .metric:last-child { border-right: 0; }
+
+    .metric strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--teal);
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 76px auto 96px;
+    }
+
+    section {
+      margin-top: 72px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+      gap: 42px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .section-head p,
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 10px 26px rgba(47, 43, 40, .05);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      line-height: 1.25;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 10px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: #ecf4f2;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .script {
+      background: #2f2b28;
+      color: #fff8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .script-row {
+      display: grid;
+      grid-template-columns: 130px 1fr 1fr;
+      gap: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .script-row:last-child { border-bottom: 0; }
+
+    .script-cell {
+      padding: 20px;
+      border-right: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .script-cell:last-child { border-right: 0; }
+
+    .time {
+      color: #ffd8b5;
+      font-weight: 900;
+    }
+
+    .script h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .script p {
+      margin: 0;
+      color: rgba(255, 255, 255, .82);
+    }
+
+    .quote {
+      padding: 32px;
+      border-left: 6px solid var(--rose);
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      font-size: 20px;
+      color: var(--ink);
+    }
+
+    .quote p {
+      margin: 0 0 18px;
+    }
+
+    .quote p:last-child { margin-bottom: 0; }
+
+    .checklist {
+      columns: 2;
+      column-gap: 34px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      break-inside: avoid;
+      position: relative;
+      padding: 0 0 14px 28px;
+      color: var(--muted);
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .68em;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      background: var(--gold);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .step {
+      border-top: 4px solid var(--teal);
+      background: var(--white);
+      border-radius: 0 0 8px 8px;
+      padding: 20px;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .step strong {
+      display: block;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .ad-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--soft);
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .ad-copy {
+      padding: 30px;
+      background: var(--white);
+    }
+
+    .ad-copy h3,
+    .ad-settings h3 {
+      margin: 0 0 16px;
+      font-size: 24px;
+    }
+
+    .ad-copy p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .ad-settings {
+      padding: 30px;
+    }
+
+    .ad-settings dl {
+      margin: 0;
+    }
+
+    .ad-settings div {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(47, 43, 40, .12);
+    }
+
+    .ad-settings div:last-child { border-bottom: 0; }
+
+    dt {
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    dd {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 78px;
+      padding: 36px;
+      background: #2f2b28;
+      color: var(--white);
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer h2 {
+      font-size: clamp(26px, 4vw, 38px);
+    }
+
+    .footer p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, .78);
+    }
+
+    .footer .button {
+      background: var(--rose);
+      color: var(--white);
+      border-color: var(--rose);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 860px) {
+      .hero { min-height: 86vh; }
+      .hero::before {
+        background:
+          linear-gradient(90deg, rgba(33, 31, 29, .86) 0%, rgba(33, 31, 29, .62) 100%),
+          linear-gradient(0deg, rgba(33, 31, 29, .9) 0%, rgba(33, 31, 29, .25) 60%);
+      }
+      .next-hint,
+      .section-head,
+      .grid-3,
+      .grid-2,
+      .timeline,
+      .ad-box,
+      .footer {
+        grid-template-columns: 1fr;
+      }
+      .metric {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .metric:last-child { border-bottom: 0; }
+      .script-row {
+        grid-template-columns: 1fr;
+      }
+      .script-cell {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .12);
+      }
+      .script-cell:last-child { border-bottom: 0; }
+      .checklist {
+        columns: 1;
+      }
+      .footer .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/beauty-training-hero.png" alt="美業肌膚管理教學情境">
+    <div class="hero-inner">
+      <div class="eyebrow">Vevel 維薇爾肌膚管理</div>
+      <h1>1999 美業肌膚管理陪跑計畫</h1>
+      <p>一支短影片，把「想學技術、想創業、想有人帶入門」的新手需求，轉成可私訊、可預約、可投放的招生訊息。</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#script">查看短影片腳本</a>
+        <a class="button secondary" href="#materials">查看拍攝素材</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="next-hint" aria-label="企劃重點">
+    <div class="metric">
+      <strong>NT$1,999</strong>
+      <span>入門陪跑活動價格</span>
+    </div>
+    <div class="metric">
+      <strong>45-60 秒</strong>
+      <span>短影片主片長度</span>
+    </div>
+    <div class="metric">
+      <strong>3 大核心</strong>
+      <span>技術、社群、顧客管理</span>
+    </div>
+    <div class="metric">
+      <strong>私訊 1999</strong>
+      <span>IG / LINE 導流關鍵字</span>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <div class="section-head">
+        <h2>活動定位</h2>
+        <p>這不是單堂技術課，而是給美業新手的一次入門方向整理。重點是降低不確定感，讓對方覺得「我可以先被帶著走」。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="tag">受眾</span>
+          <h3>想創業的人</h3>
+          <p>對美業有興趣，想開工作室或做副業，但不知道該先學技術、找客源，還是先經營社群。</p>
+        </article>
+        <article class="card">
+          <span class="tag">需求</span>
+          <h3>想有人帶入門</h3>
+          <p>不是單純買課，而是需要有人幫他看方向、拆流程、理解美業實際接客會遇到什麼。</p>
+        </article>
+        <article class="card">
+          <span class="tag">轉換</span>
+          <h3>私訊後再評估</h3>
+          <p>短影片不需要一次講完全部細節，核心任務是讓對方私訊「1999」領活動內容。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>影片溝通邏輯</h2>
+        <p>先戳痛點，再講新手真正會卡住的地方，最後提出 1999 陪跑計畫。這樣會比直接說「課程優惠」更有說服力。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>1. 先讓對方點頭</h3>
+          <p>「想進入美業，但不知道第一步該怎麼開始？」讓想學的人先被說中。</p>
+        </article>
+        <article class="card">
+          <h3>2. 拆開真正困難</h3>
+          <p>美業不是只會操作，還有社群曝光、預約回覆、回訪、顧客留存。</p>
+        </article>
+        <article class="card">
+          <h3>3. 給出明確入口</h3>
+          <p>用「1999 陪跑計畫」降低門檻，再用「私訊 1999」收名單。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="script">
+      <div class="section-head">
+        <h2>短影片分鏡腳本</h2>
+        <p>建議拍成直式 Reels，畫面乾淨明亮，語氣真誠專業。主理人出鏡要佔至少 40%，建立「有人帶」的信任感。</p>
+      </div>
+
+      <div class="script">
+        <div class="script-row">
+          <div class="script-cell time">0-5 秒</div>
+          <div class="script-cell">
+            <h3>開場痛點</h3>
+            <p>主理人站在工作室或保養床旁，正面看鏡頭。</p>
+          </div>
+          <div class="script-cell">
+            <h3>主理人說</h3>
+            <p>你是不是也想進入美業，想學肌膚管理，但一直不知道第一步該怎麼開始？</p>
+          </div>
+        </div>
+        <div class="script-row">
+          <div class="script-cell time">6-12 秒</div>
+          <div class="script-cell">
+            <h3>新手誤區</h3>
+            <p>拿工具、整理產品、示範準備流程。</p>
+          </div>
+          <div class="script-cell">
+            <h3>主理人說</h3>
+            <p>很多人以為，只要學會一項技術，就可以開始接客、開始創業。</p>
+          </div>
+        </div>
+        <div class="script-row">
+          <div class="script-cell time">13-22 秒</div>
+          <div class="script-cell">
+            <h3>真正卡點</h3>
+            <p>手機滑 IG、回覆私訊、預約表、顧客紀錄快速切換。</p>
+          </div>
+          <div class="script-cell">
+            <h3>主理人說</h3>
+            <p>但真正開始後你會發現，你還要會判斷膚況、會經營社群、會跟客人溝通，也要知道怎麼預約、回訪和留住顧客。</p>
+          </div>
+        </div>
+        <div class="script-row">
+          <div class="script-cell time">23-30 秒</div>
+          <div class="script-cell">
+            <h3>活動亮相</h3>
+            <p>主理人進入教學空間，或拿出教材看鏡頭。</p>
+          </div>
+          <div class="script-cell">
+            <h3>主理人說</h3>
+            <p>所以這次，Vevel 維薇爾推出 1999 美業肌膚管理陪跑計畫。</p>
+          </div>
+        </div>
+        <div class="script-row">
+          <div class="script-cell time">31-46 秒</div>
+          <div class="script-cell">
+            <h3>三大內容</h3>
+            <p>技術示範、拍攝社群內容、顧客紀錄表三段畫面。</p>
+          </div>
+          <div class="script-cell">
+            <h3>主理人說</h3>
+            <p>我們會從技術學習、社群經營，到顧客管理，帶你看懂美業新手真正該怎麼開始。</p>
+          </div>
+        </div>
+        <div class="script-row">
+          <div class="script-cell time">47-60 秒</div>
+          <div class="script-cell">
+            <h3>收尾 CTA</h3>
+            <p>主理人正面看鏡頭，最後切到 IG / LINE 畫面。</p>
+          </div>
+          <div class="script-cell">
+            <h3>主理人說</h3>
+            <p>如果你想創業、想學技術，或只是想有人帶你入門，私訊我「1999」，我帶你看看你適不適合開始美業。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>主理人口播完整稿</h2>
+        <p>可直接照念，也可以剪成 6 段分開拍。語氣要像在對一位猶豫的新手說話，不要像硬銷課程。</p>
+      </div>
+      <div class="quote">
+        <p>你是不是也想進入美業，想學肌膚管理，但一直不知道第一步該怎麼開始？</p>
+        <p>很多人以為，只要學會一項技術，就可以開始接客、開始創業。</p>
+        <p>但真正開始後你會發現，你還要會判斷膚況、會經營社群、會跟客人溝通，也要知道怎麼預約、回訪和留住顧客。</p>
+        <p>所以這次，Vevel 維薇爾推出 1999 美業肌膚管理陪跑計畫。</p>
+        <p>我們會從肌膚管理的基礎開始，帶你看懂膚況、了解服務流程，知道新手該怎麼學技術。</p>
+        <p>也會教你怎麼整理自己的定位、怎麼發文、怎麼拍內容，讓別人知道你正在做什麼。</p>
+        <p>還會帶你了解從第一次諮詢、預約、服務後追蹤，到讓顧客願意再次回來的基本流程。</p>
+        <p>如果你想創業、想學技術、想做副業，或只是想有人帶你入門，不要自己一個人亂摸索。</p>
+        <p>私訊我「1999」，我會帶你了解這個陪跑計畫，也陪你看看你適不適合開始美業。</p>
+      </div>
+    </section>
+
+    <section id="materials">
+      <div class="section-head">
+        <h2>拍攝素材清單</h2>
+        <p>素材要讓觀眾看見三件事：真的有技術、真的會教、真的能帶新手開始經營。</p>
+      </div>
+      <div class="card">
+        <ul class="checklist">
+          <li>主理人正面講話，站在保養床旁或工作室內</li>
+          <li>主理人拿美容工具、保養品、教材</li>
+          <li>肌膚檢測與膚況觀察畫面</li>
+          <li>清粉刺或保養操作近拍，保持乾淨專業</li>
+          <li>主理人示範手法，學員在旁邊看或練習</li>
+          <li>工作室環境、產品櫃、工具區、消毒細節</li>
+          <li>手機滑 IG、查看貼文、查看 Reels 畫面</li>
+          <li>拍攝社群內容的側拍畫面</li>
+          <li>發文規劃表、筆記、白板或行事曆</li>
+          <li>LINE 私訊或預約畫面，個資必須遮蔽</li>
+          <li>顧客膚況紀錄表，避免露出姓名電話</li>
+          <li>服務後回訪範例訊息</li>
+          <li>IG / LINE 官方帳號片尾畫面</li>
+          <li>品牌 LOGO 或店門口招牌</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>字幕與封面文字</h2>
+        <p>字幕要短，讓滑手機的人 1 秒內知道這支影片跟自己有關。</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <span class="tag">封面</span>
+          <h3>想進入美業？這次有人帶你開始</h3>
+          <p>適合放在 Reels 封面與短影音第一秒。</p>
+        </article>
+        <article class="card">
+          <span class="tag">片尾</span>
+          <h3>私訊「1999」領陪跑活動資訊</h3>
+          <p>最後 3 秒要停留，讓觀眾有時間看清楚 CTA。</p>
+        </article>
+      </div>
+      <div class="grid-3" style="margin-top:16px">
+        <article class="card"><h3>技術學習</h3><p>看懂膚況、服務流程、基礎操作。</p></article>
+        <article class="card"><h3>社群經營</h3><p>定位、發文、拍內容、讓人知道你在做什麼。</p></article>
+        <article class="card"><h3>顧客管理</h3><p>諮詢、預約、回訪、再預約。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>廣告投放方向</h2>
+        <p>第一波以「私訊名單」為目標，不急著把所有課程細節塞進廣告。先讓想學的人舉手，再由私訊成交。</p>
+      </div>
+      <div class="ad-box">
+        <div class="ad-copy">
+          <h3>廣告文案</h3>
+          <p>想進入美業，卻不知道從哪裡開始？</p>
+          <p>Vevel 維薇爾推出 1999 美業肌膚管理陪跑計畫，從技術學習、社群經營到顧客管理，帶你看懂新手真正該準備什麼。</p>
+          <p>適合想創業、想學技術、想做副業、想有人帶入門的你。</p>
+          <p><strong>私訊「1999」了解活動內容。</strong></p>
+        </div>
+        <div class="ad-settings">
+          <h3>投放設定</h3>
+          <dl>
+            <div>
+              <dt>目標</dt>
+              <dd>IG 私訊、LINE 預約、表單名單</dd>
+            </div>
+            <div>
+              <dt>地區</dt>
+              <dd>嘉義市為主，延伸周邊 20-30 公里</dd>
+            </div>
+            <div>
+              <dt>年齡</dt>
+              <dd>20-45 歲，女性為主，可另開男性組測試</dd>
+            </div>
+            <div>
+              <dt>素材</dt>
+              <dd>主理人出鏡 Reels、教學側拍、社群經營畫面</dd>
+            </div>
+            <div>
+              <dt>測試</dt>
+              <dd>痛點開場、創業開場、技術入門開場各一版</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>執行時程</h2>
+        <p>建議用一天拍完主素材，隔天剪出 1 支主片和 2 支短版切角，方便後續廣告測試。</p>
+      </div>
+      <div class="timeline">
+        <div class="step">
+          <strong>Day 1｜拍攝</strong>
+          <p>主理人口播、技術操作、社群經營、顧客管理畫面一次拍齊。</p>
+        </div>
+        <div class="step">
+          <strong>Day 2｜剪輯</strong>
+          <p>完成 45-60 秒主片，加字幕、封面、片尾 CTA。</p>
+        </div>
+        <div class="step">
+          <strong>Day 3｜上架</strong>
+          <p>IG Reels、FB Reels、限動同步發布，私訊關鍵字統一用 1999。</p>
+        </div>
+        <div class="step">
+          <strong>Day 4-7｜投放</strong>
+          <p>用小預算測試開場與受眾，觀察私訊成本和報名意願。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div>
+        <h2>本企劃的目標</h2>
+        <p>把 1999 活動從「便宜課程」升級成「新手有人帶入門」的陪跑方案，讓想創業、想學技術的人願意主動私訊。</p>
+      </div>
+      <a class="button" href="#script">回到腳本</a>
+    </section>
+  </main>
+</body>
+</html>
